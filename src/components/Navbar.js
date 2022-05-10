@@ -1,11 +1,16 @@
+import { Link } from 'gatsby'
 import React from 'react'
+import logo from "../images/logo.svg"
+
 
 export default function Navbar() {
   return (
-    <div>
-        <h3>galleria</h3>
+    <nav>
+        <Link to="/">
+          <img src={logo} alt="logo"/>
+        </Link>
         {/* Link needed for start slideshow, but to what path? */}
-        <h4>start slideshow</h4>
-    </div>
+        <h3>start slideshow</h3>
+    </nav>
   )
 }
