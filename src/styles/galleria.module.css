@@ -5,7 +5,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .gallery__img {
-    border: 2px solid magenta;
     position: relative;
     flex: 100%;
     max-width: 100%;
