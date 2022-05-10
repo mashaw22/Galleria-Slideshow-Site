@@ -37,7 +37,7 @@ img {
     width: 113px;
 }
 
-@media (min-width: 375px){
+@media (min-width: 390px){
     nav {
         padding: 1.875em 2.5em;
     }

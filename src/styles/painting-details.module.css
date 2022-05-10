@@ -1,0 +1,62 @@
+.layout {
+    margin: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 327px;
+}
+.thumbnail {
+    position: relative;
+    max-width: 327px;
+    margin-bottom: 3.375em;
+}
+.headerText {
+    position: absolute;
+    background-color: #ffffff;
+    color: #000000;
+    left: 0;
+    top: 200px;
+    width: 85%;
+    padding: 1.5em;
+}
+.headerText > h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.headerText > h2 {
+    font-size: 1rem;
+    color: #7D7D7D;
+}
+.artistImg {
+    margin-bottom: 3.375em;
+    width: 64px;
+}
+
+/* Year and Description */
+
+.details {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 7.79em;
+}
+.details > h3 {
+    position: absolute;
+    font-size: 6.25rem;
+    color: #F3F3F3;
+    right: 0;
+    top: -175px;
+    z-index: -2;
+}
+.details > div {
+    font-size: 0.875rem; 
+    line-height: 28px;
+    color: #7D7D7D;
+    margin-bottom: 2.85em;
+}
+.details > a {
+    font-size: 0.5625rem; 
+    letter-spacing: 2px;
+    color: #7D7D7D;
+    text-transform: uppercase;
+    
+}
