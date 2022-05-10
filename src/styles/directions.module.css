@@ -1,0 +1,29 @@
+.directions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d3d3d3;
+    padding: 1em 1.5em;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+}
+.text > h3 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0;
+}
+.text > p {
+    font-size: 0.625rem;
+    margin-bottom: 0;
+}
+.images {
+    display: flex;
+    justify-content: space-between;
+    width: 56px;
+}
+.images > img {
+    width: 17px;
+    height: 17px;
+}
