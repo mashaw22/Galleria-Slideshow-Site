@@ -3,7 +3,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import GalleryDirections from '../components/GalleryDirections'
 import Layout from "../components/Layout"
-import {layout, thumbnail, headerText, artistImg, details} from "../styles/painting-details.module.css"
+import * as styles from "../styles/painting-details.module.css"
+import iconViewImage from "../images/icons/iconViewImage.svg"
 
 export default function PaintingDetails({ data }) {
   console.log(data)
@@ -12,26 +13,35 @@ export default function PaintingDetails({ data }) {
 
   return (
       <Layout stopSlideShow="Stop Slideshow">
-        <div className={layout}>
-          
-          <div className={thumbnail}>
-            <GatsbyImage image={getImage(images.hero.small)} alt={name}/>
-            <div className={headerText}>
-                <h1>{name}</h1>
-                <h2>{artist.name}</h2>
+        <div className={styles.layout}>
+
+          <div className={styles.hero__section}>
+            <div>
+              <GatsbyImage className={styles.hero__small} image={getImage(images.hero.small)} alt={name}/>
+              <GatsbyImage className={styles.hero__large}image={getImage(images.hero.large)} alt={name}/>
+              <div className={styles.hero__view}>
+                <img src={iconViewImage} alt="View Image"/>
+                <p>View Image</p>
+              </div>
             </div>
+
+              <div className={styles.hero__subdetails}>
+                <div className={styles.hero__text}>
+                    <h1>{name}</h1>
+                    <h2>{artist.name}</h2>
+                </div>    
+                <div className={styles.hero__artist}>
+                  <GatsbyImage image={getImage(artist.image)} alt={artist.name} />
+                </div>
+              </div>
           </div>
           
-
-
-          <div className={artistImg}>
-            <GatsbyImage image={getImage(artist.image)} alt={artist.name} />
-          </div>
-          
-          <div className={details}>
+          <div className={styles.details}>
             <h3>{year}</h3>
-            <div dangerouslySetInnerHTML={{ __html: html}}/>
-            <a href={source}>Go to source</a>
+            <div className={styles.details__text}>
+              <div dangerouslySetInnerHTML={{ __html: html}}/>
+              <a href={source}>Go to source</a>
+            </div>
 
           </div>
         </div>
