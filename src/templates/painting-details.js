@@ -1,15 +1,23 @@
+import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React from 'react'
 import GalleryDirections from '../components/GalleryDirections'
 import Layout from "../components/Layout"
-import * as styles from "../styles/painting-details.module.css"
 import iconViewImage from "../images/icons/iconViewImage.svg"
+import * as styles from "../styles/painting-details.module.css"
 
 export default function PaintingDetails({ data }) {
-  console.log(data)
   const { html } = data.markdownRemark
   const {name, source, year, artist, images} = data.markdownRemark.frontmatter
+  const [imageIsShown, setImageIsShown] = useState(false)
+
+  function viewImage(){
+    setImageIsShown(true)
+  }
+
+  function hideImage(){
+    setImageIsShown(false)
+  }
 
   return (
       <Layout stopSlideShow="Stop Slideshow">
@@ -19,10 +27,10 @@ export default function PaintingDetails({ data }) {
             <div>
               <GatsbyImage className={styles.hero__small} image={getImage(images.hero.small)} alt={name}/>
               <GatsbyImage className={styles.hero__large}image={getImage(images.hero.large)} alt={name}/>
-              <div className={styles.hero__view}>
-                <img src={iconViewImage} alt="View Image"/>
-                <p>View Image</p>
-              </div>
+              <button className={styles.hero__view} onClick={viewImage}>
+                <img src={iconViewImage} alt="View"/>
+                View Image
+              </button>
             </div>
 
               <div className={styles.hero__subdetails}>
@@ -40,12 +48,20 @@ export default function PaintingDetails({ data }) {
             <h3>{year}</h3>
             <div className={styles.details__text}>
               <div dangerouslySetInnerHTML={{ __html: html}}/>
-              <a href={source}>Go to source</a>
+              <a href={source}>Go to source</a>-[]
             </div>
 
           </div>
         </div>
         <GalleryDirections name={name} artist={artist.name}/>
+        {imageIsShown && 
+          <div className={styles.overlay}>
+            <div className={styles.overlay__main}>
+              <GatsbyImage className={styles.overlay__imageSmall} image={getImage(images.hero.small)} alt={name} />
+              <GatsbyImage className={styles.overlay__imageLarge} image={getImage(images.hero.large)} alt={name} />
+              <button onClick={hideImage}className={styles.overlay__button}>Close</button>
+            </div>
+          </div>}
       </Layout>
   )
 }
