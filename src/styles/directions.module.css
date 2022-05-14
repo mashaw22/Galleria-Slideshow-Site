@@ -23,7 +23,8 @@
     justify-content: space-between;
     width: 56px;
 }
-.images > img {
+.backButton, 
+.nextButton {
     width: 17px;
     height: 17px;
 }

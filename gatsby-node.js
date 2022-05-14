@@ -4,21 +4,31 @@ exports.createPages = async({graphql, actions}) => {
     const { data } = await graphql(`
         query Gallery {
             allMarkdownRemark {
-                nodes {
+                edges {
+                  node {
                     frontmatter {
-                        slug
+                      slug
                     }
+                  }
                 }
-            }
-        }
+              }
+            }          
     `)
 
-    data.allMarkdownRemark.nodes.forEach(node => {
+    const nodes = data.allMarkdownRemark.edges
+
+    nodes.forEach((node, index) => {
+        const next = index === nodes.length - 1 ? null : nodes[index + 1].node
+        const previous = index === 0 ? null : nodes[index - 1].node
+
         actions.createPage({
-            path: node.frontmatter.slug,
+            path: node.node.frontmatter.slug,
             component: path.resolve("./src/templates/painting-details.js"),
-            context: { slug: node.frontmatter.slug }
+            context: { 
+                slug: node.node.frontmatter.slug,
+                previous,
+                next,
+            }
         })
     })
-
 }
