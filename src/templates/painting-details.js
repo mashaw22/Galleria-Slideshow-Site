@@ -15,20 +15,16 @@ class PaintingDetails extends React.Component {
   }
 
   hideImage = () => {
-    return this.setState({imageIsShown: false})
+    this.setState({imageIsShown: false})
   }
+  
   render() {
-
-    console.log(this.props.data)
     const { html } = this.props.data.markdownRemark
     const {name, source, year, artist, images} = this.props.data.markdownRemark.frontmatter
-    const { previous, next } = this.props.pageContext
-    console.log(previous)
-    console.log(next)
-  
+    const { previous, next, currentPage } = this.props.pageContext
   
     return (
-        <Layout stopSlideShow="Stop Slideshow">
+        <Layout currentPage={currentPage} next={next}>
           <div className={styles.layout}>
   
             <div className={styles.hero__section}>

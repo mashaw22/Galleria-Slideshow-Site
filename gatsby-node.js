@@ -20,6 +20,8 @@ exports.createPages = async({graphql, actions}) => {
     nodes.forEach((node, index) => {
         const next = index === nodes.length - 1 ? null : nodes[index + 1].node
         const previous = index === 0 ? null : nodes[index - 1].node
+        const firstPage = nodes[0].node
+        const currentPage = nodes[index].node
 
         actions.createPage({
             path: node.node.frontmatter.slug,
@@ -28,6 +30,8 @@ exports.createPages = async({graphql, actions}) => {
                 slug: node.node.frontmatter.slug,
                 previous,
                 next,
+                firstPage,
+                currentPage
             }
         })
     })
