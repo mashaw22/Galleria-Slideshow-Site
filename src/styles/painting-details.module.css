@@ -4,14 +4,15 @@
     display: flex;
     flex-direction: column;
     min-width: 340px;
+    max-height: calc(100vh - 180px);
     padding: 1.5em;
+    overflow: scroll;
 }
 .hero__section {
     position: relative;
     margin-bottom: 11em;
 }
 .hero__subdetails{
-    /* border: 2px solid magenta; */
     width: 85%;
     position: absolute;
     top: 70%;
@@ -176,6 +177,7 @@
     /* Layout */
     .layout {
         max-width: 870px;
+        max-height: calc(100vh - 210px);
     }
     .hero__section {
         margin-bottom: 8.7em;
@@ -213,11 +215,12 @@
 
 @media (min-width: 1250px) {
     .layout {
+        max-height: calc(100vh - 210px);
         width: 100%;
         max-width: 1500px;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 6.25em;
+        /* margin-top: 6.25em; */
     }
     .hero__section {
         width: 790px;
@@ -239,6 +242,10 @@
     .hero__artist{
         margin-right: 9em;
     }
+    .hero__view {
+        bottom: auto; 
+        top: 1em;
+     }
     .details {
         max-width: 475px;
         margin-top: 7em;
