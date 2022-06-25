@@ -97,8 +97,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [Gatsby.js](https://www.gatsbyjs.com/)
 * [Node.js](https://nodejs.org/en/docs/)
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS++++6
-++++++++++++++++66+666+6+++++++++++++++++++-++-++--+-------+-+++++++++)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -169,11 +168,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Samantha Neely - [@samIamCODING](https://twitter.com/samIamCODING) - samneely.dev@gmail.com
-
-Portfolio - [Samantha Neely](https://samanthaneely.me/)
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+- Project Link - [Galleria](https://fm-galleria.netlify.app/)
+- Portfolio - [Samantha Neely](https://samanthaneely.me/)
+- Frontend Mentor - [@mashaw22](https://www.frontendmentor.io/profile/mashaw22)
+- Twitter - [@samIamCODING](https://twitter.com/samIamCODING)
+- LinkedIn - [@samantha-neely](https://www.linkedin.com/in/samantha-neely/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -192,16 +191,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/mashaw22/Galleria-Slideshow-Site.svg?style=for-the-badge
+[contributors-url]: https://github.com/mashaw22/Galleria-Slideshow-Site/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mashaw22/Galleria-Slideshow-Site.svg?style=for-the-badge
+[forks-url]: https://github.com/mashaw22/Galleria-Slideshow-Site/network/members
+[stars-shield]: https://img.shields.io/github/stars/mashaw22/Galleria-Slideshow-Site.svg?style=for-the-badge
+[stars-url]: https://github.com/mashaw22/Galleria-Slideshow-Site/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mashaw22/Galleria-Slideshow-Site.svg?style=for-the-badge
+[issues-url]: https://github.com/mashaw22/Galleria-Slideshow-Site/issues
+[license-shield]: https://img.shields.io/github/license/mashaw22/Galleria-Slideshow-Site.svg?style=for-the-badge
+[license-url]: https://github.com/mashaw22/Galleria-Slideshow-Site/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/samantha-neely/
 [product-screenshot]: images/screenshot.png
